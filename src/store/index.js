@@ -17,6 +17,12 @@ const rootReducer = (state = initialState, action) => {
       counter: state.counter - 1,
     };
   }
+    if (action.type === "increase") {
+        return {
+        ...state,
+        counter: state.counter + action.amount,
+        };
+    }
 
   return state;
 };
